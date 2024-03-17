@@ -61,12 +61,13 @@ def recursive_solve_tree(node):
     elif node.data == '/':
         return left_child / right_child
 
-expression = "5"
-tree_root = build_tree(expression)
-result = recursive_solve_tree(tree_root)
-print("Result:", result)
+test = "5"
+print(recursive_solve_tree(build_tree(test))) # prints 5 (:
 
-complex_expression = "( ( 1 + ( 4 * 9 ) ) - 4 )"
-complex_tree_root = build_tree(complex_expression)
-complex_result = recursive_solve_tree(complex_tree_root)
-print("Result of complex expression:", complex_result)
+
+test = "( ( 1 + ( 4 * 9 ) ) - 4 )"
+print(recursive_solve_tree(build_tree(test))) # prints 33 (:
+
+
+test = "( ( 8 * ( 9 / 3 ) ) + 6 )"
+print(recursive_solve_tree(build_tree(test))) # prints 30.0 (cause of the division) (:
